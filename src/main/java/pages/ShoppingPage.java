@@ -25,6 +25,12 @@ public class ShoppingPage extends BasePage {
     private static WebElement viewCartButton;
     @FindBy(xpath = "//*[@id=\"content\"]/form/div/table/tbody/tr/td[2]/a")
     private static WebElement productElement;
+    @FindBy(css = "#menu>div:nth-of-type(2)>ul> li:nth-of-type(7)>a")
+    private static WebElement camerasMenuButton;
+    @FindBy(css = "#content .caption>h4:nth-of-type(1)>a:nth-of-type(1)")
+    private static WebElement canonEOS5DButton;
+    @FindBy(css = ".list-unstyled >li:nth-of-type(2)>h2")
+    private static WebElement priceLabel;
 
 
     static {
@@ -67,5 +73,14 @@ public class ShoppingPage extends BasePage {
         String text = productElement.getText();
         System.out.println(text);
         Assert.assertTrue(text.contains(expectedText));
+    }
+    public static void clickOnCamerasButton(){
+        clickOnElement(camerasMenuButton);
+    }
+    public static void clickOnCanon5DButton(){
+        clickOnElement(canonEOS5DButton);
+    }
+    public static void verifyPriceOfCanon5D(String expectedPrice){
+        Assert.assertEquals(priceLabel.getText(), expectedPrice);
     }
 }

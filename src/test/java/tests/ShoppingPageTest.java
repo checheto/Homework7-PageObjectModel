@@ -25,4 +25,12 @@ public class ShoppingPageTest extends BaseTest {
         ShoppingPage.clickOnViewCartButton();
         ShoppingPage.verifyShoppingCart("iPhone");
     }
+
+    @Test
+    public static void canonEOS5DPriceTest(){
+        ShoppingPage.goToShoppingPage();
+        ShoppingPage.clickOnCamerasButton();
+        ShoppingPage.clickOnCanon5DButton();
+        ShoppingPage.verifyPriceOfCanon5D("$98.00");
+    }
 }
