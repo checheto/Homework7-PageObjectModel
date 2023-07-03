@@ -29,6 +29,7 @@ public class AdminLeftNavigationBar extends BasePage {
     }
 
     public static void clickOnOrdersElement() {
+        WaitTool.waitForElementToBeClickable(By.xpath("//*[@id=\"collapse4\"]/li[1]/a"),3);
         clickOnElement(ordersElement);
     }
 

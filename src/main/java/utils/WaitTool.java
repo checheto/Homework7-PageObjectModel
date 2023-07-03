@@ -20,4 +20,9 @@ public class WaitTool {
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
         return element;
     }
+    public static WebElement waitForElementToBeClickable(By locator, long timeToWait){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeToWait));
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+        return element;
+    }
 }
