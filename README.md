@@ -1,4 +1,4 @@
-# Selenium module -PageObjectModel homework
+# Selenium module - PageObjectModel homework
 
 For homework:
 Use the following system:
